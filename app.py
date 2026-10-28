@@ -2,6 +2,7 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image
+from pathlib import Path
 
 st.title("Federated Medical Diagnosis - Global Model Demo")
 st.write("Upload an X-ray image to classify Normal vs Pneumonia.")
@@ -11,7 +12,7 @@ def build_model(weights):
     IMG_SHAPE = (100,100,3)
     base_model = tf.keras.applications.EfficientNetV2S(
         include_top=False,
-        weights='imagenet',
+        weights=None,
         input_tensor=None,
         input_shape=IMG_SHAPE,
         pooling=None,
@@ -43,7 +44,7 @@ def build_model(weights):
 
 @st.cache_resource
 def load_model():
-    return build_model("/mnt/d/RATUL/COMPUTER PROGRAMMING AND CODING/TENSORFLOW/MEDICAL HACKATHON/HOSPITAL/global_model.weights.h5")
+    return build_model(Path(__file__).resolve().parent / "HOSPITAL" / "global_model.weights.h5")
 
 model = load_model()
 

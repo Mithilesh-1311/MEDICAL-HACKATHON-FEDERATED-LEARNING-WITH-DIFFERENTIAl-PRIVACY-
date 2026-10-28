@@ -1,0 +1,4 @@
+HOSPITAL/*
+!HOSPITAL/global_model.weights.h5
+*.log
+__pycache__/
