@@ -30,10 +30,6 @@ h3 { font-size: 1.1rem !important; }
 .method-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; color: #456454;
     font-size: .8rem; padding: .8rem 0 1.8rem; }
 .method-strip span { border-left: 2px solid #bdcebc; padding-left: .65rem; }
-[data-testid="stVerticalBlockBorderWrapper"] > div { border-radius: 12px !important; }
-[data-testid="stVerticalBlockBorderWrapper"]:has(.step-label) > div {
-    background: #fff; border: 1px solid #eaeaea !important; padding: 1.5rem !important;
-}
 .step-label { color: #65776c; text-transform: uppercase; margin-bottom: .5rem; }
 [data-testid="stFileUploaderDropzone"] {
     background: #f5f7f2; border: 1px dashed #a5baa9; border-radius: 8px;
@@ -65,7 +61,6 @@ button:focus-visible, a:focus-visible { outline: 3px solid #718d5c !important; o
     .masthead { margin-bottom: 2rem; align-items: flex-start; }
     .meta { max-width: 115px; text-align: right; }
     .method-strip { gap: .8rem; }
-    [data-testid="stVerticalBlockBorderWrapper"]:has(.step-label) > div { padding: 1rem !important; }
 }
 </style>
 <div class="masthead">
