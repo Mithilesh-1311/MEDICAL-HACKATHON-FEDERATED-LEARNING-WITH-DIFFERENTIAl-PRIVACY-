@@ -9,7 +9,7 @@ st.markdown("""
 <style>
 [data-testid="stAppViewContainer"] { background: #f7f8f4; }
 [data-testid="stHeader"] { background: #f7f8f4; }
-.block-container { max-width: 1160px; padding-top: 3rem; padding-bottom: 2rem; }
+.block-container { max-width: 1160px; padding-top: 5rem; padding-bottom: 2rem; }
 h1, h2, h3, p { color: #263c35; }
 h1 { font-family: Georgia, 'Times New Roman', serif !important; font-weight: 400 !important;
      font-size: clamp(2.5rem, 5vw, 4.2rem) !important; letter-spacing: -.045em;
@@ -57,7 +57,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid #718d5c !important; o
 .page-footer { display: flex; justify-content: space-between; gap: 1rem;
     flex-wrap: wrap; color: #66756a; font-size: .75rem; margin-top: 2rem; }
 @media (max-width: 640px) {
-    .block-container { padding: 2rem 1rem; }
+    .block-container { padding: 5rem 1rem 2rem; }
     .masthead { margin-bottom: 2rem; align-items: flex-start; }
     .meta { max-width: 115px; text-align: right; }
     .method-strip { gap: .8rem; }
