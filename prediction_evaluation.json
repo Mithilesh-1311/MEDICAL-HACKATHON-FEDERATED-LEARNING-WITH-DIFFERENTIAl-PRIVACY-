@@ -1,0 +1,36 @@
+{
+  "images": 624,
+  "classes": [
+    "NORMAL",
+    "PNEUMONIA"
+  ],
+  "confusion_matrix_axes": "rows=actual, columns=predicted",
+  "results": {
+    "previous": {
+      "accuracy": 0.8173076923076923,
+      "confusion_matrix": [
+        [
+          164,
+          70
+        ],
+        [
+          44,
+          346
+        ]
+      ]
+    },
+    "training_matched": {
+      "accuracy": 0.8253205128205128,
+      "confusion_matrix": [
+        [
+          169,
+          65
+        ],
+        [
+          44,
+          346
+        ]
+      ]
+    }
+  }
+}

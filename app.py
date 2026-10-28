@@ -49,6 +49,12 @@ def load_model():
 model = load_model()
 
 
+def preprocess_image(img):
+    # Match the notebook's bilinear resize on raw pixels, then its 1/99 scaling.
+    pixels = tf.image.resize(np.asarray(img.convert("RGB")), (100, 100))
+    return tf.expand_dims(pixels / 99.0, axis=0)
+
+
 uploaded_img = st.file_uploader("Upload a Chest X-ray Image", type=["png", "jpg", "jpeg"])
 
 if uploaded_img:
@@ -57,8 +63,7 @@ if uploaded_img:
 
     st.image(img_resized, caption="Uploaded Image", width=200)
 
-    x = np.array(img_resized)/99.0
-    x = np.expand_dims(x, axis=0)
+    x = preprocess_image(img)
 
     pred = model.predict(x)
     class_idx = np.argmax(pred)
